@@ -1,0 +1,30 @@
+@use '../util/functions' as f;
+body {
+    display: flex;
+    justify-content: center;
+}
+p {
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+}
+.form {
+    box-shadow: 0, 0, f.rem(32), black;
+    &__button, &__input {
+        /*border: none;*/
+        height: 5vh;
+    }
+    &__button {
+        padding: clamp(f.rem(8), f.rem(10) + 0.5vw, f.rem(96));
+    }
+    &__button:hover {
+        cursor: pointer;
+    }
+    &__input {
+        width: 80vw;
+        padding: clamp(f.rem(10), f.rem(11) + 1vw, f.rem(120));
+    }
+    &__input:focus {
+        outline: none;
+    }
+}

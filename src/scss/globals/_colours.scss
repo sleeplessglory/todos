@@ -1,0 +1,19 @@
+@use '../util/functions' as f;
+body {
+    background-color: hsl(0, 0%, 96%);
+}
+p {
+    color: hsl(4, 28%, 88%);
+}
+button {
+    /*border-color: hsl(0, 36%, 88%);*/
+}
+.form {
+    background-color: hsl(0, 0%, 100%);
+    &__button, &__input::placeholder {
+        color: hsl(0, 0%, 90%);
+    }
+    &__button, &__input {
+        background-color: rgba(255, 255, 255, 0);
+    }
+}

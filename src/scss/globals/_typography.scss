@@ -1,0 +1,26 @@
+@use '../util/functions' as f;
+@font-face {
+    font-family: Helvetica Ultra Light;
+    src: url(../assets/fonts/HelveticaNeueUltraLight.otf);
+}
+@font-face {
+    font-family: Helvetica Thin;
+    src: url(../assets/fonts/HelveticaNeueThin.otf);
+}
+@font-face {
+    font-family: Helvetica Thin Italic;
+    src: url(../assets/fonts/HelveticaNeueThinItalic.otf);
+}
+p {
+    font-family: 'Helvetica Ultra Light', 'Times New Roman', Arial;
+    font-size: clamp(f.rem(32), f.rem(44) + 4vw, f.rem(240));
+}
+.form {
+    &__input::placeholder {
+        font-family: 'Helvetica Thin', 'Times New Roman', Arial;
+        font-style: italic;
+    }
+    &__button, &__input, &__input::placeholder {
+        font-size: clamp(f.rem(8), f.rem(16) + 1vw, f.rem(120));
+    }
+}

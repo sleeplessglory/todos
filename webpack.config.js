@@ -5,7 +5,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 const config = {
     entry: './src/index.tsx',
     output: {
-        path: path.resolve('dist'),
+        path: path.resolve('build'),
         filename: 'bundle.js',
         clean: true
     },
@@ -48,7 +48,7 @@ const config = {
         }),
     ],
     devServer: {
-        static: './dist',
+        static: './build',
         port: 3000,
         open: true
     },
